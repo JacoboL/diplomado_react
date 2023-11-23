@@ -28,18 +28,20 @@ html, body {
     max-height: 100%;
 }
 .d-inline > .card {
-    width: 10rem;
+    width: 12rem;
+    height: 15rem;
     box-shadow: 2px 6px 8px 0 rgba(40, 40, 42, 0.25);
     transition: 0.5s;
 }
 .d-inline > .card:hover{
-    width: 10.5rem;
+    width: 13rem;
+    height: 16rem;
 }
 
 .horizontal-scrollable > .row { 
     overflow-x: auto;
     scroll-snap-type: x proximity;
-    height: 87vh;
+    height: 90vh;
 } 
 .horizontal-scrollable > .row > .col {
     scroll-snap-align: start;
