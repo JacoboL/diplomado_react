@@ -6,6 +6,7 @@ import theme from "./Theme.js";
 import SearchAppBar from "./components/SearchAppBar.js";
 import Portada from "./components/Portada.js";
 import SeccionPrincipal from "./components/SeccionPrincipal.js";
+import Seccion from "./components/Seccion.js";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <CssBaseline />
         <SearchAppBar />
         <Portada />
-        <SeccionPrincipal/>
+        <SeccionPrincipal />
+        <Seccion />
       </ThemeProvider>
     </>
   );
