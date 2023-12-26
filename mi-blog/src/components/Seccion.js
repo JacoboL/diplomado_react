@@ -1,7 +1,23 @@
-import { Divider, Paper, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import MediaCard from "./MediaCard";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
+import { styled } from "@mui/material/styles";
+
+const CustomScrollBar = styled(Box)(({ theme }) => ({
+  overflow: "auto",
+  whiteSpace: "nowrap",
+  overflowY: "hidden",
+  "&::-webkit-scrollbar": {
+    height: 10,
+  },
+  "&::-webkit-scrollbar-track": {
+    backgroundColor: theme.palette.background.default,
+  },
+  "&::-webkit-scrollbar-thumb": {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
 
 export default function Seccion() {
   const tarjeta_v = {
@@ -14,8 +30,8 @@ export default function Seccion() {
   };
 
   return (
-    <Paper elevation={1} sx={{ py: 6 }}>
-      <Grid container columnSpacing={{ xs: 2 }} sx={{px: 12}}>
+    <Box sx={{ py: 6, overflowX: "hidden" }}>
+      <Grid container columnSpacing={{ xs: 2 }} sx={{ px: 12 }}>
         <Grid>
           <MovieOutlinedIcon sx={{ fontSize: 60 }} />
         </Grid>
@@ -27,26 +43,38 @@ export default function Seccion() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={2} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
+      <CustomScrollBar>
+        <Grid
+          container
+          direction={"row"}
+          wrap="nowrap"
+          spacing={4}
+          columnSpacing={{ xs: 35 }}
+          sx={{ ml: -6, mb: 2 }}
+        >
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
+          <Grid xs={3}>
+            <MediaCard tarjeta={tarjeta_v} />
+          </Grid>
         </Grid>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
-        </Grid>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
-        </Grid>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
-        </Grid>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
-        </Grid>
-        <Grid xs={3}>
-          <MediaCard tarjeta={tarjeta_v} />
-        </Grid>
-      </Grid>
-    </Paper>
+      </CustomScrollBar>
+    </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Divider, Paper, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import MediaCard from "./MediaCard";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import FiberNewTwoToneIcon from "@mui/icons-material/FiberNewTwoTone";
@@ -21,7 +21,7 @@ export default function SeccionPrincipal() {
     fecha: "31.02.2024",
   };
   return (
-    <Paper elevation={1} sx={{ px: 12, py: 6 }}>
+    <Box elevation={1} sx={{ px: 12, py: 6 }}>
         
       <Grid container columnSpacing={{ xs: 2}}>
         <Grid>
@@ -55,6 +55,6 @@ export default function SeccionPrincipal() {
           </Box>
         </Grid>
       </Grid>
-    </Paper>
+    </Box>
   );
 }

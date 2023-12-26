@@ -1,20 +1,9 @@
 import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
+import {AppBar, Box, Toolbar, IconButton, Typography, InputBase, List, ListItemButton, ListItemIcon, ListItemText, Drawer, } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-
-import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
@@ -62,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function SearchAppBar() {
-  const [select, setSelected] = useState(true);
+  const [abierto, setAbierto] = useState(false);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="primary">
@@ -73,7 +62,7 @@ function SearchAppBar() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
-            onClick={() => setSelected(true)}
+            onClick={() => setAbierto(true)}
           >
             <MenuIcon />
           </IconButton>
@@ -98,9 +87,9 @@ function SearchAppBar() {
           </Search>
         </Toolbar>
       </AppBar>
-      <Drawer open={select} variant="temporary">
+      <Drawer open={abierto} variant="temporary">
         <div>
-          <IconButton onClick={() => setSelected(false)} color="inherit" size="large">
+          <IconButton onClick={() => setAbierto(false)} color="inherit" size="large">
             <CloseIcon />
           </IconButton>
         </div>

@@ -1,5 +1,5 @@
 import "./App.css";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, Paper, ThemeProvider } from "@mui/material";
 
 import theme from "./Theme.js";
 
@@ -14,9 +14,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <SearchAppBar />
-        <Portada />
-        <SeccionPrincipal />
-        <Seccion />
+        <Paper elevation={1}>
+          <Portada />
+          <SeccionPrincipal />
+          <Seccion />
+        </Paper>
       </ThemeProvider>
     </>
   );
