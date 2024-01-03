@@ -15,7 +15,7 @@ export default function SeccionPrincipal() {
   };
 
   return (
-    <Box elevation={1} sx={{ px: 12, py: 6 }}>
+    <Box sx={{ px: {xs: 3, sm: 6, md: 12}, py: 6 }}>
         
       <TituloSeccion titulo={"Ultimas Entradas"}/>
 

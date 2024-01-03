@@ -12,12 +12,12 @@ function Box(props) {
     <mesh
       {...props}
       ref={ref}
-      onClick={() => click( clicked <= 10 ? clicked + 1 : 1)}
+      onClick={() => click(clicked <= 10 ? clicked + 1 : 1)}
       onPointerOver={(event) => (event.stopPropagation(), hover(true))}
       onPointerOut={(event) => hover(false)}
     >
       <torusKnotGeometry args={[2, 0.6, 150, 16, clicked, 5]} />
-      <meshStandardMaterial color={hovered ? "#D7A107" : "#8B8B72" } />
+      <meshStandardMaterial color={hovered ? "#D7A107" : "#8B8B72"} />
     </mesh>
   );
 }
@@ -54,7 +54,7 @@ export default function Portada() {
             decay={0}
             intensity={Math.PI}
           />
-          <Box position={[0, 0, 0]} />
+          <Box position={[0, 0, 0]} rotation={[0, Math.PI, 0]} />
         </Canvas>
       </Paper>
     </>
