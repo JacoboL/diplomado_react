@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import {AppBar, Box, Toolbar, IconButton, Typography, InputBase, List, ListItemButton, ListItemIcon, ListItemText, Drawer, } from "@mui/material";
+import { AppBar, Box, Toolbar, IconButton, Typography, InputBase, List, ListItemButton, ListItemIcon, ListItemText, Drawer, Divider } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -89,20 +89,22 @@ function SearchAppBar() {
       </AppBar>
       <Drawer open={abierto} variant="temporary">
         <div>
-          <IconButton onClick={() => setAbierto(false)} color="inherit" size="large">
+          <IconButton
+            onClick={() => setAbierto(false)}
+            color="inherit"
+            size="large"
+          >
             <CloseIcon />
           </IconButton>
         </div>
-        <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-        >
+        <List component="nav" aria-labelledby="nested-list-subheader">
           <ListItemButton>
             <ListItemIcon>
               <SendIcon />
             </ListItemIcon>
             <ListItemText primary="Sent mail" />
           </ListItemButton>
+          <Divider variant="middle" sx={{ borderBottomWidth: 2 }} />
           <ListItemButton>
             <ListItemIcon>
               <DraftsIcon />
