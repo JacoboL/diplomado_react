@@ -20,14 +20,17 @@ const CustomScrollBar = styled(Box)(({ theme }) => ({
 }));
 
 export default function Seccion() {
-  const tarjeta_v = {
+  const tarjeta = {
     imagen: "imagen_demo.jpg",
     titulo: "Dune",
     creador: "Frank Herbert",
     autor: "Jacobo Leyva",
     estreno: "1967",
     fecha: "31.02.2024",
+    tipo: "libro",
   };
+
+  const datos = [tarjeta, tarjeta, tarjeta, tarjeta, tarjeta, tarjeta, tarjeta];
 
   return (
     <Box sx={{ py: 6, overflowX: "hidden" }}>
@@ -52,27 +55,11 @@ export default function Seccion() {
           columnSpacing={{ xs: 35 }}
           sx={{ ml: -6, mb: 2 }}
         >
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
-          <Grid xs={3}>
-            <MediaCard tarjeta={tarjeta_v} />
-          </Grid>
+          {datos.map((t) => (
+            <Grid xs={3}>
+              <MediaCard tarjeta={t} />
+            </Grid>
+          ))}
         </Grid>
       </CustomScrollBar>
     </Box>

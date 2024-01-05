@@ -1,0 +1,15 @@
+.prueba{
+    background-color: aqua;
+    width: 100%;
+    height: 500px;
+}
+.prueba::before {
+    position: absolute;
+    left: 0;
+  width: 100vw;
+  background-image: url("../public/imagen_demo_h.jpg");
+  aspect-ratio: 1.8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(75%) blur(5px);
+}

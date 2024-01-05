@@ -8,6 +8,7 @@ import Portada from "./components/Portada.js";
 import SeccionPrincipal from "./components/SeccionPrincipal.js";
 import Seccion from "./components/Seccion.js";
 import SeccionDestacada from "./components/SeccionDestacada.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Seccion />
           <SeccionDestacada />
         </Paper>
+        <Footer/>
       </ThemeProvider>
     </>
   );
