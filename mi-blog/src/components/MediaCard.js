@@ -1,4 +1,10 @@
-import { Divider, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Divider,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
 
@@ -9,9 +15,18 @@ export default function MediaCard({ tarjeta, vertical = true }) {
   const imagen = vertical ? tarjeta.imagen : tarjeta.imagenFondo;
 
   return (
-    <Card sx={{ borderRadius: 3, minWidth: '250px' }} elevation={2}>
+    <Card sx={{ borderRadius: 3, minWidth: "250px" }} elevation={2}>
       <CardMedia
-        sx={{ aspectRatio: ratio, borderRadius: 3, borderBottom: 8, borderTop: 0, borderRight: 0, borderLeft: 6, borderColor: theme.palette.secondary.main, objectFit: 'cover', maxHeight:'750px'}}
+        sx={{
+          aspectRatio: ratio,
+          borderRadius: 3,
+          borderBottom: 8,
+          borderTop: 0,
+          borderRight: 0,
+          borderLeft: 6,
+          borderColor: theme.palette.secondary.main,
+          objectFit: "cover",
+        }}
         image={imagen}
         title={tarjeta.titulo}
       />
@@ -25,7 +40,13 @@ export default function MediaCard({ tarjeta, vertical = true }) {
         >
           {tarjeta.titulo}
         </Typography>
-        <Divider sx={{ mb: 3, borderBottomWidth: 5 }} />
+        <Divider
+          sx={{
+            mb: 3,
+            borderBottomWidth: 5,
+            backgroundColor: theme.palette.secondary.main,
+          }}
+        />
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }}>
           <Grid xs={6}>
             <Typography variant="body1" color="text.secondary" noWrap={true}>

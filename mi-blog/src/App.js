@@ -21,6 +21,7 @@ function App() {
           <SeccionPrincipal />
           <Seccion />
           <SeccionDestacada />
+          <Seccion />
         </Paper>
         <Footer/>
       </ThemeProvider>

@@ -1,15 +1,8 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import { Button, Chip } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, IconButton, Typography, Button, Chip } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import '../index.css' 
 
 function KeyWord({ texto, link }) {
   return (
