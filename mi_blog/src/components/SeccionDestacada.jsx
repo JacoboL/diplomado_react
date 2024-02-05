@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import { Box, Card, CardContent, CardMedia, IconButton, Typography, Button, Chip } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography, Button, Chip } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -33,9 +33,10 @@ function KeyWords() {
   ];
 
   return (
-    <Grid container columnSpacing={{ xs: 1 }}>
-      {datos.map((keyWord) => (
-        <Grid>
+    
+    <Grid container columnSpacing={{ xs: 1 }} sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
+      {datos.map((keyWord, i) => (
+        <Grid key={i}>
           <KeyWord texto={keyWord.texto} link={keyWord.enlace} />
         </Grid>
       ))}
@@ -47,22 +48,12 @@ function CardFooter() {
   return (
     <Grid container spacing={2} sx={{ pb: 2 }}>
       <Grid xs={10}>
-        <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-          <KeyWords />
-        </Box>
+        <KeyWords />
       </Grid>
       <Grid xs={2}>
-        <IconButton
-          aria-label="Ver Mas"
-          sx={{ borderRadius: "25%", marginLeft: "auto" }}
-        >
-          <Button
-            color="info"
-            endIcon={<ArrowForwardIosIcon fontSize="large" />}
-          >
-            Leer Más
-          </Button>
-        </IconButton>
+        <Button variant="text" endIcon={<ArrowForwardIosIcon/>} sx={{color: "#28282A"}}>
+          Leer Más
+        </Button>
       </Grid>
     </Grid>
   );

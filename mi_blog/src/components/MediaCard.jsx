@@ -5,7 +5,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from '@mui/material/Grid';
 import { useTheme } from "@mui/material/styles";
 
 export default function MediaCard({ tarjeta, vertical = true }) {
@@ -48,22 +48,22 @@ export default function MediaCard({ tarjeta, vertical = true }) {
           }}
         />
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }}>
-          <Grid xs={6}>
+          <Grid item={true} xs={6}>
             <Typography variant="body1" color="text.secondary" noWrap={true}>
               {tarjeta.creador}
             </Typography>
           </Grid>
-          <Grid xs={6}>
+          <Grid item={true} xs={6}>
             <Typography variant="body1" color="primary" align="right">
               {tarjeta.autor}
             </Typography>
           </Grid>
-          <Grid xs={6}>
+          <Grid item={true} xs={6}>
             <Typography variant="body1" color="text.secondary">
               {tarjeta.estreno}
             </Typography>
           </Grid>
-          <Grid xs={6}>
+          <Grid item={true} xs={6}>
             <Typography variant="body1" color="primary" align="right">
               {tarjeta.fecha}
             </Typography>

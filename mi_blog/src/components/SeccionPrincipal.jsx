@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import MediaCard from "./MediaCard";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import Grid from '@mui/material/Unstable_Grid2';
 import TituloSeccion from "./TituloSeccion";
 import FiberNewTwoToneIcon from '@mui/icons-material/FiberNewTwoTone';
 

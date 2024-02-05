@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import MediaCard from "./MediaCard";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import Grid from '@mui/material/Grid';
 import { styled } from "@mui/material/styles";
 import TituloSeccion from "./TituloSeccion";
 
@@ -30,6 +30,7 @@ export default function Seccion() {
     enlace: "#",
   };
   const tarjeta = {
+    id: 0,
     imagen: "imagen_demo.jpg",
     titulo: "Dune",
     creador: "Frank Herbert",
@@ -55,11 +56,11 @@ export default function Seccion() {
           direction={"row"}
           wrap="nowrap"
           spacing={4}
-          columnSpacing={{ xs: 35 }}
-          sx={{ ml: { xs: -12, md: -6 }, mb: 2 }}
+          columnSpacing={{ xs: 37, md: 4 }}
+          sx={{ ml: { xs: -34, md: 8 }, mb: 2 }}
         >
-          {datos.map((t) => (
-            <Grid xs={3}>
+          {datos.map((t, i) => (
+            <Grid item={true} xs={3} key={i}>
               <MediaCard tarjeta={t} />
             </Grid>
           ))}
