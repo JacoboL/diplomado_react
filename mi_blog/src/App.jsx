@@ -8,6 +8,7 @@ import SearchAppBar from "./components/SearchAppBar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from './pages/home'
 import Busqueda from './pages/busqueda'
+import Articulo from './pages/Articulo.jsx';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
         <CssBaseline />
         <SearchAppBar />
         {/*<Home/>*/}
-        <Busqueda/>
+        {/*<Busqueda/>*/}
+        <Articulo/>
         <Footer/>
       </ThemeProvider>
     </>
