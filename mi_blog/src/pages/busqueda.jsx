@@ -54,7 +54,7 @@ function Encabezado({ filtros, quitar }) {
       </Box>
       <Divider
         sx={{
-          mb: 1,
+          my: 1,
           borderBottomWidth: 4,
           backgroundColor: theme.palette.primary.main,
         }}
@@ -110,10 +110,10 @@ function Busqueda() {
         container
         rowSpacing={4}
         columnSpacing={{ xs: 1, sm: 2, md: 10 }}
-        sx={{ p: 0 }}
+        sx={{ mt: 1 }}
       >
         {datos.map((t, i) => (
-          <Grid key={i} xs={12} sm={12} md={6}>
+          <Grid key={i} xs={12} sm={12} md={12} lg={6}>
             <BusquedaMediaCard tarjeta={t} />
           </Grid>
         ))}

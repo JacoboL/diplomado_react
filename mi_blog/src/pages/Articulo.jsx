@@ -26,7 +26,7 @@ const Fondo = styled("img")(({ theme }) => ({
 
 const Poster = styled("img")(({ theme }) => ({
   position: "absolute",
-  marginTop: 30,
+  top: "15%",
   left: "0",
   right: "0",
   marginLeft: "auto",

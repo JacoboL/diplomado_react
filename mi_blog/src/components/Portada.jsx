@@ -39,7 +39,14 @@ export default function Portada() {
           variant="h1"
           sx={{ position: "absolute", left: "50px", top: "100px", zIndex: "1" }}
         >
-          Página Principal
+          Mi Blog
+        </Typography>
+        <Typography
+          variant="h4"
+          color="primary"
+          sx={{ position: "absolute", left: "50px", top: "225px", zIndex: "1" }}
+        >
+          Un blog de ciencia ficción
         </Typography>
         <Canvas>
           <ambientLight intensity={Math.PI / 2} />

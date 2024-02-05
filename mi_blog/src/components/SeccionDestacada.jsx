@@ -1,12 +1,12 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Unstable_Grid2";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -39,29 +39,39 @@ function KeyWords() {
   ];
 
   return (
-    
-    <Grid container columnSpacing={{ xs: 1 }} sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-      {datos.map((keyWord, i) => (
-        <Grid key={i}>
-          <KeyWord texto={keyWord.texto} link={keyWord.enlace} />
-        </Grid>
-      ))}
-    </Grid>
+    <Box justifyContent={"left"} alignItems={"left"} display={"flex"}>
+      <Grid
+        container
+        columnSpacing={{ xs: 1 }}
+        rowSpacing={1}
+        sx={{ pl: 1, pb: 1 }}
+      >
+        {datos.map((keyWord, i) => (
+          <Grid key={i}>
+            <KeyWord texto={keyWord.texto} link={keyWord.enlace} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 }
 
 function CardFooter() {
+  const theme = useTheme();
+
   return (
-    <Grid container spacing={2} sx={{ pb: 2 }}>
-      <Grid xs={10}>
-        <KeyWords />
-      </Grid>
-      <Grid xs={2}>
-        <Button variant="text" endIcon={<ArrowForwardIosIcon/>} sx={{color: "#28282A"}}>
+    <Box display={"flex"} justifyContent={"space-between"}>
+      <KeyWords />
+      <Box justifyContent={"right"} alignItems={"right"} display={"flex"}>
+        <Button
+          variant="text"
+          endIcon={<ArrowForwardIosIcon />}
+          sx={{ color: theme.palette.background.paper }}
+        >
           Leer Más
         </Button>
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   );
 }
 
@@ -78,11 +88,12 @@ function SeccionDestacada() {
           color: theme.palette.background.paper,
         }}
       >
-          <Grid container columnSpacing={{ xs: 1 }} sx={{ p: 6 }}>
-            <Grid xs={12} sm={12} md={3} sx={{ justifyItems: "center" }}>
+        <Grid container columnSpacing={{ xs: 1 }} sx={{ p: 6 }}>
+          <Grid xs={12} sm={12} md={4} sx={{ justifyItems: "center" }}>
               <Typography component="div" variant="h3">
                 Libro Destacado
               </Typography>
+            <Box justifyContent={"center"} alignItems={"center"} display={"flex"}>
               <CardMedia
                 component="img"
                 sx={{
@@ -94,32 +105,32 @@ function SeccionDestacada() {
                 image="imagen_demo.jpg"
                 alt="Dune"
               />
-            </Grid>
-            <Grid xs={12} sm={12} md={8}>
-              <CardContent sx={{ height: "94%" }}>
-                <Typography component="div" variant="h2">
-                  Dune
-                </Typography>
-                <Typography variant="subtitle1" component="div">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Saepe eaque voluptas reprehenderit voluptatibus. Maiores enim
-                  esse unde voluptatem quod dicta nesciunt temporibus, illum id
-                  repudiandae, accusamus velit? Id repellendus ullam
-                  consequuntur numquam necessitatibus nostrum magni placeat
-                  officiis consequatur quibusdam distinctio sequi ipsa, ea nihil
-                  accusamus eligendi, cum totam eos vero doloribus aperiam
-                  aspernatur dignissimos doloremque? Praesentium neque impedit,
-                  odit amet architecto aliquam ut explicabo natus a pariatur
-                  necessitatibus error quae quibusdam beatae itaque repellat nam
-                  numquam sint alias rerum ad est! Eveniet facilis a nisi qui
-                  sint, unde deleniti? Eius architecto fugit delectus sapiente
-                  quidem, minima distinctio veniam molestias odit.
-                </Typography>
-              </CardContent>
-              <CardFooter />
-            </Grid>
+            </Box>
           </Grid>
-        
+          <Grid xs={12} sm={12} md={8}>
+            <CardContent sx={{ height: "90%" }}>
+              <Typography component="div" variant="h2">
+                Dune
+              </Typography>
+              <Typography variant="subtitle1" component="div">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+                eaque voluptas reprehenderit voluptatibus. Maiores enim esse
+                unde voluptatem quod dicta nesciunt temporibus, illum id
+                repudiandae, accusamus velit? Id repellendus ullam consequuntur
+                numquam necessitatibus nostrum magni placeat officiis
+                consequatur quibusdam distinctio sequi ipsa, ea nihil accusamus
+                eligendi, cum totam eos vero doloribus aperiam aspernatur
+                dignissimos doloremque? Praesentium neque impedit, odit amet
+                architecto aliquam ut explicabo natus a pariatur necessitatibus
+                error quae quibusdam beatae itaque repellat nam numquam sint
+                alias rerum ad est! Eveniet facilis a nisi qui sint, unde
+                deleniti? Eius architecto fugit delectus sapiente quidem, minima
+                distinctio veniam molestias odit.
+              </Typography>
+            </CardContent>
+            <CardFooter />
+          </Grid>
+        </Grid>
       </Card>
     </>
   );

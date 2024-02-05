@@ -23,8 +23,8 @@ export default function SeccionPrincipal() {
       </TituloSeccion>
 
       <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 10 }} sx={{p:0}}>
-        <Grid xs={12} sm={12} md={5} >
-          <MediaCard tarjeta={tarjeta} />
+        <Grid xs={12} sm={12} md={5}>
+          <MediaCard  tarjeta={tarjeta} />
         </Grid>
         <Grid xs={12} sm={12} md={7}>
           <Box>
