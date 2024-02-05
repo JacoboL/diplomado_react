@@ -1,8 +1,8 @@
-import Box from '@mui/material/Box';
-import Grid from "@mui/material/Unstable_Grid2";
 import { styled } from "@mui/material/styles";
 import TituloSeccion from "./TituloSeccion";
 import MediaCard from "./MediaCard";
+import Box from '@mui/material/Box';
+import Grid from "@mui/material/Unstable_Grid2";
 
 import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
 

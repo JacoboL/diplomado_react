@@ -1,10 +1,11 @@
+import { useTheme } from "@mui/material/styles";
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import CardActionArea from '@mui/material/CardActionArea';
 import Grid from "@mui/material/Unstable_Grid2";
-import { useTheme } from "@mui/material/styles";
 
 export default function MediaCard({ tarjeta, vertical = true }) {
   const theme = useTheme();
@@ -14,22 +15,24 @@ export default function MediaCard({ tarjeta, vertical = true }) {
 
   return (
     <Card sx={{ borderRadius: 3, minWidth: "250px" }} elevation={2}>
-      <CardMedia
-        sx={{
-          aspectRatio: ratio,
-          borderRadius: 3,
-          borderBottom: 8,
-          borderTop: 0,
-          borderRight: 0,
-          borderLeft: 6,
-          borderColor: theme.palette.secondary.main,
-          objectFit: "cover",
-        }}
-        component="img"
-        image={imagen}
-        title={tarjeta.titulo}
-        alt={tarjeta.titulo}
-      />
+      <CardActionArea>
+        <CardMedia
+          sx={{
+            aspectRatio: ratio,
+            borderRadius: 3,
+            borderBottom: 8,
+            borderTop: 0,
+            borderRight: 0,
+            borderLeft: 6,
+            borderColor: theme.palette.secondary.main,
+            objectFit: "cover",
+          }}
+          component="img"
+          image={imagen}
+          title={tarjeta.titulo}
+          alt={tarjeta.titulo}
+        />
+      </CardActionArea>
       <CardContent>
         <Typography
           gutterBottom
