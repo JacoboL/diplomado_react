@@ -108,7 +108,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function SearchAppBar() {
+function SearchAppBar({ pagina }) {
   const [abierto, setAbierto] = useState(false);
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -158,7 +158,7 @@ function SearchAppBar() {
         </Box>
         <List component="nav" aria-labelledby="nested-list-subheader">
           
-          <ListItemButton component="a" href="/">
+          <ListItemButton component="button" onClick={() => pagina(1)}>
             <ListItemIcon>
               <HomeOutlinedIcon />
             </ListItemIcon>
@@ -167,11 +167,20 @@ function SearchAppBar() {
 
           <Divider variant="middle" sx={{ borderBottomWidth: 2 }} />
 
-          <ListItemButton component="a" href="/busquedda/peliculas">
+          <ListItemButton component="button" onClick={() => pagina(2)}>
             <ListItemIcon >
               <MovieOutlinedIcon/>
             </ListItemIcon>
             <ListItemText primary="Películas" />
+          </ListItemButton>
+
+          <Divider variant="middle" sx={{ borderBottomWidth: 2 }} />
+
+          <ListItemButton component="button" onClick={() => pagina(3)}>
+            <ListItemIcon >
+              <MovieOutlinedIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Artículo" />
           </ListItemButton>
 
         </List>
