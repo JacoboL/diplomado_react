@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import { Paper, Typography } from "@mui/material";
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 

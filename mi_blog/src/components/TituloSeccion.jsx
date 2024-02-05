@@ -1,4 +1,7 @@
-import { Box, Divider, Typography, IconButton } from "@mui/material";
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
 import FiberNewTwoToneIcon from "@mui/icons-material/FiberNewTwoTone";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useTheme } from "@mui/material/styles";

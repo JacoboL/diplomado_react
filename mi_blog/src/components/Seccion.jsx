@@ -1,12 +1,10 @@
-import { Box } from "@mui/material";
-import MediaCard from "./MediaCard";
-import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Grid from "@mui/material/Unstable_Grid2";
 import { styled } from "@mui/material/styles";
 import TituloSeccion from "./TituloSeccion";
+import MediaCard from "./MediaCard";
 
-import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
 import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
-import RocketTwoToneIcon from "@mui/icons-material/RocketTwoTone";
 
 const CustomScrollBar = styled(Box)(({ theme }) => ({
   overflow: "auto",
@@ -56,11 +54,11 @@ export default function Seccion() {
           direction={"row"}
           wrap="nowrap"
           spacing={4}
-          columnSpacing={{ xs: 37, md: 4 }}
-          sx={{ ml: { xs: -34, md: 8 }, mb: 2 }}
+          columnSpacing={{ xs: 37 }}
+          sx={{ ml: { xs: -15, sm:-12, md:-7}, mb: 2 }}
         >
           {datos.map((t, i) => (
-            <Grid item={true} xs={3} key={i}>
+            <Grid xs={3} key={i}>
               <MediaCard tarjeta={t} />
             </Grid>
           ))}

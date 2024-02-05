@@ -1,12 +1,24 @@
 import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import { Switch, AppBar, Box, Toolbar, IconButton, Typography, InputBase, List, ListItemButton, ListItemIcon, ListItemText, Drawer, Divider } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
+import Switch from '@mui/material/Switch';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import InputBase from '@mui/material/InputBase';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Drawer from '@mui/material/Drawer';
+import Divider from '@mui/material/Divider';
 
 import CloseIcon from "@mui/icons-material/Close";
-import DraftsIcon from "@mui/icons-material/Drafts";
-import SendIcon from "@mui/icons-material/Send";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
+import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -146,19 +158,23 @@ function SearchAppBar() {
           <MaterialUISwitch/>
         </Box>
         <List component="nav" aria-labelledby="nested-list-subheader">
-          <ListItemButton>
+          
+          <ListItemButton component="a" href="/">
             <ListItemIcon>
-              <SendIcon />
+              <HomeOutlinedIcon />
             </ListItemIcon>
-            <ListItemText primary="Sent mail" />
+            <ListItemText primary="Home" />
           </ListItemButton>
+
           <Divider variant="middle" sx={{ borderBottomWidth: 2 }} />
-          <ListItemButton>
-            <ListItemIcon>
-              <DraftsIcon />
+
+          <ListItemButton component="a" href="/busquedda/peliculas">
+            <ListItemIcon >
+              <MovieOutlinedIcon/>
             </ListItemIcon>
-            <ListItemText primary="Drafts" />
+            <ListItemText primary="Películas" />
           </ListItemButton>
+
         </List>
       </Drawer>
     </Box>

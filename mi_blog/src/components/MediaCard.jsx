@@ -1,11 +1,9 @@
-import {
-  Divider,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
 
 export default function MediaCard({ tarjeta, vertical = true }) {
@@ -27,8 +25,10 @@ export default function MediaCard({ tarjeta, vertical = true }) {
           borderColor: theme.palette.secondary.main,
           objectFit: "cover",
         }}
+        component="img"
         image={imagen}
         title={tarjeta.titulo}
+        alt={tarjeta.titulo}
       />
       <CardContent>
         <Typography
@@ -48,22 +48,22 @@ export default function MediaCard({ tarjeta, vertical = true }) {
           }}
         />
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }}>
-          <Grid item={true} xs={6}>
+          <Grid xs={6}>
             <Typography variant="body1" color="text.secondary" noWrap={true}>
               {tarjeta.creador}
             </Typography>
           </Grid>
-          <Grid item={true} xs={6}>
+          <Grid xs={6}>
             <Typography variant="body1" color="primary" align="right">
               {tarjeta.autor}
             </Typography>
           </Grid>
-          <Grid item={true} xs={6}>
+          <Grid xs={6}>
             <Typography variant="body1" color="text.secondary">
               {tarjeta.estreno}
             </Typography>
           </Grid>
-          <Grid item={true} xs={6}>
+          <Grid xs={6}>
             <Typography variant="body1" color="primary" align="right">
               {tarjeta.fecha}
             </Typography>

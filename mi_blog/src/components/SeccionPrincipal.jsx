@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
 import MediaCard from "./MediaCard";
-import Grid from '@mui/material/Unstable_Grid2';
 import TituloSeccion from "./TituloSeccion";
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Unstable_Grid2';
 import FiberNewTwoToneIcon from '@mui/icons-material/FiberNewTwoTone';
 
 export default function SeccionPrincipal() {
